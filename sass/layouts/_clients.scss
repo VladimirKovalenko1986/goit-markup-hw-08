@@ -1,0 +1,45 @@
+.clients {
+  padding: 94px 0;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    width: calc((100% - 150px) / 6);
+
+    &:not(:first-child) {
+      margin-left: 30px;
+    }
+  }
+
+  &__link {
+    border: 1px solid var(--color-icons-partners);
+    border-radius: 4px;
+
+    &--functional {
+      @include flex-centered;
+      height: 92px;
+
+      transition: border 250ms var(--cubic-all);
+    }
+
+    &:hover,
+    &:focus {
+      border: 1px solid var(--color-text-logonav);
+    }
+
+    &:hover .clients__svg,
+    &:focus .clients__svg {
+      fill: var(--color-text-logonav);
+    }
+  }
+
+  &__svg {
+    fill: var(--color-icons-partners);
+
+    &--functional {
+      transition: fill 250ms var(--cubic-all);
+    }
+  }
+}

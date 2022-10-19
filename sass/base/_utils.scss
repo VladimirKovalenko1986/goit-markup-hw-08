@@ -1,0 +1,25 @@
+body {
+  font-family: "Roboto", sans-serif;
+  @include font(14px, 400, 1.7, 0.03em);
+
+  color: var(--color-primery-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+  margin: 0;
+}
+
+ul {
+  padding-left: 0;
+}
+
+* {
+  //   outline: 1px solid tomato;
+}

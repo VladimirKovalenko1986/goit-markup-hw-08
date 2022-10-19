@@ -1,0 +1,56 @@
+.conteiner {
+  width: 1200px;
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  //   outline: 1px solid tomato;
+}
+
+// All properties
+.title {
+  color: var(--color-secondery-text);
+
+  @include font(36px, 700, 1.2, 0.03em);
+
+  &--functional {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: var(--color-text-logonav);
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+// Modal
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}

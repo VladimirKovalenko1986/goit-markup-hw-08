@@ -1,0 +1,32 @@
+.hero {
+  text-align: center;
+  padding: 200px;
+  padding-bottom: 200px;
+  max-width: 1600px;
+  min-height: 600px;
+  margin: 0 auto;
+
+  &--bg {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/hero-pictures.jpg");
+  }
+
+  &__title {
+    color: var(--color-hero-title);
+
+    @include font(44px, 900, 1.4, 0.06em);
+    text-transform: uppercase;
+
+    &--functional {
+      max-width: 696px;
+      margin: 0 auto 30px;
+    }
+  }
+}

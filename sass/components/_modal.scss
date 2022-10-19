@@ -1,0 +1,230 @@
+.backdrop {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  background-color: var(--color-bg-ocupation-text);
+
+  &.is-hidden .modal {
+    transform: scale(1.2) translate(-50%, -50%);
+  }
+}
+
+.modal {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  background-color: var(--color-hero-title);
+
+  &--finctional {
+    position: absolute;
+    width: 528px;
+    height: 581px;
+    top: 50%;
+    left: 50%;
+    padding: 40px 39px 40px 41px;
+    transform: scale(1) translate(-50%, -50%);
+
+    transition: transform 250ms var(--cubic-all);
+  }
+
+  &__button {
+    position: absolute;
+    @include flex-centered;
+
+    padding: 0;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    // outline: 1px solid tomato;
+
+    background-color: var(--color-hero-title);
+
+    &:hover .modal__svg,
+    &:focus .modal__svg {
+      fill: var(--color-text-logonav);
+    }
+  }
+
+  &__svg {
+    fill: var(--color-logo-text);
+  }
+}
+
+// Form modal
+
+.form-modal {
+  @include font(12px, 400, 1.2, 0.01em);
+
+  &__text {
+    @include font(20px, 700, 1.2, 0.03em);
+
+    color: var(--color-secondery-text);
+
+    &--functional {
+      margin-bottom: 12px;
+      text-align: center;
+    }
+  }
+
+  &__label {
+    margin-bottom: 4px;
+  }
+
+  // conteiner form modal
+  &__conteiner {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+    &--coment {
+      margin-bottom: 20px;
+    }
+
+    &--checkbox {
+      @include flex-centered;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__inputcheckbox {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: 1px;
+  }
+
+  &__labelcheckbox {
+    @include font(14px, 400, 1.7, 0.03em);
+
+    &--functional {
+      @include flex-centered;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+// conteiner form
+.card-form {
+  position: relative;
+
+  &__input {
+    outline: none;
+    border: 1px solid var(--color-border-modal);
+
+    &--functional {
+      width: 100%;
+      height: 40px;
+      padding-left: 42px;
+      border-radius: 4px;
+
+      transition: border 250ms var(--cubic-all), fill 250ms var(--cubic-all);
+    }
+
+    &:focus {
+      border: 1px solid var(--color-text-logonav);
+    }
+
+    &:focus + .card-form__svg {
+      fill: var(--color-text-logonav);
+    }
+  }
+
+  &__svg {
+    fill: var(--color-secondery-text);
+
+    &--functional {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      margin-left: 12px;
+
+      transform: translateY(-50%);
+    }
+  }
+}
+
+// textarea
+
+.form-modal__conteiner--coment textarea {
+  padding: 12px 16px;
+  resize: none;
+  height: 120px;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid var(--color-border-modal);
+
+  transition: border 250ms var(--cubic-all);
+
+  &:focus {
+    border: 1px solid var(--color-text-logonav);
+  }
+
+  &::placeholder {
+    color: var(--color-modal-textera);
+  }
+}
+
+// Swap icon checkbox
+.box-checkbox {
+  border-radius: 3px;
+  border: 3px solid var(--color-secondery-text);
+
+  &--functional {
+    @include flex-centered;
+
+    margin-right: 8px;
+    width: 15px;
+    height: 15px;
+  }
+
+  &__svg {
+    //   outline: 1px solid tomato;
+    fill: var(--color-hero-title);
+  }
+}
+
+// Link checkbox
+.form-modal__link {
+  color: var(--color-text-logonav);
+
+  &--functional {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    margin-left: 5px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    width: 100%;
+    height: 0.5px;
+
+    background-color: var(--color-text-logonav);
+  }
+}
+
+// Checked icon checkbox
+.form-modal__inputcheckbox:checked + .form-modal__labelcheckbox .box-checkbox {
+  background-color: var(--color-text-logonav);
+  border: 3px solid var(--color-text-logonav);
+}
