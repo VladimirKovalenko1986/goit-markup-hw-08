@@ -1,21 +1,45 @@
 .footer {
   background-color: var(--color-bgn-hero);
+  @include desktop-max {
+    text-align: center;
+  }
 
   &--functional {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding: 60px 0;
   }
 }
 .conteiner--footer {
-  display: flex;
-  align-items: baseline;
+  @include desktop-min {
+    display: flex;
+  }
+}
+
+.adress-social-conteiner {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    padding: 0 74px 0 61px;
+    margin-bottom: 60px;
+  }
+  @include desktop-min {
+    display: flex;
+  }
+}
+
+.box-footer {
 }
 
 .address {
   font-style: normal;
+  @include table-max {
+    margin-bottom: 60px;
+  }
 
   &__item:not(:last-child) {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
+
+    @include desktop-min {
+      margin-bottom: 9px;
+    }
   }
 
   &__link {
@@ -36,14 +60,23 @@
     }
   }
 }
-
 .box-social {
-  margin-left: 70px;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-top: 5px;
+  }
+  @include table-max {
+    margin-bottom: 60px;
+  }
+  @include desktop-max {
+    margin-left: auto;
+  }
+  @include desktop-min {
+    margin-left: 70px;
+  }
 
   &__text {
     color: var(--color-hero-title);
-
-    font-weight: 700;
+    @include font(14px, 700, 1.1, 0.03em);
     text-transform: uppercase;
 
     &--functional {
@@ -85,12 +118,13 @@
 }
 
 .box-form {
-  margin-left: auto;
+  @include desktop-min {
+    margin-left: auto;
+  }
 
   &__text {
     color: var(--color-hero-title);
-
-    font-weight: 700;
+    @include font(14px, 700, 1.1, 0.03em);
     text-transform: uppercase;
 
     &--functional {
@@ -101,9 +135,8 @@
 }
 
 .conteiner-form {
-  display: flex;
+  /// display: flex;
 }
-
 .form-footer__input {
   border: 1px solid var(--color-border-footer-form);
   outline: none;
@@ -119,33 +152,28 @@
       color: var(--color-text-logonav);
     }
   }
-
   &--functional {
-    width: 358px;
+    width: 100%;
     height: 50px;
     padding-left: 16px;
     border-radius: 4px;
+    @include table-min {
+      width: 450px;
+    }
+    @include desktop-min {
+      width: 358px;
+    }
+
+    @include desktop-max {
+      margin-bottom: 20px;
+    }
 
     transition: border 250ms var(--cubic-all);
   }
 
   &::placeholder {
-    font-size: 16px;
-    line-height: 1.3;
-    letter-spacing: 0.03em;
+    @include font(16px, 400, 1.3, 0.03em);
 
     color: var(--color-footer-text);
   }
-}
-
-// SVG
-.btn__svg {
-  position: absolute;
-  top: 50%;
-  //   right: 8px;
-  margin-left: 10px;
-
-  fill: var(--color-hero-title);
-
-  transform: translateY(-50%);
 }

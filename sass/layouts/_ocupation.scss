@@ -1,6 +1,11 @@
 .ocupation {
-  padding-top: 47px;
-  padding-bottom: 94px;
+  @include desktop-max {
+    display: none;
+  }
+
+  @include desktop-min {
+    padding: 47px 0 94px;
+  }
 
   &__list {
     display: flex;

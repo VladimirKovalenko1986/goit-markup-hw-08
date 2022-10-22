@@ -24,6 +24,19 @@
           <a href="./index.html" class="logo logo--functionalheader"
             ><span class="logo__span">Web</span>Studio</a
           >
+
+          <!-- Mobil menu -->
+          <button
+            class="menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg width="40" height="40" class="menu-toggle__svg">
+              <use xlink:href="./images/icon.svg#icon-mobal-menu"></use>
+            </svg>
+          </button>
+
+          <!-- Navigation -->
           <ul class="navigation__list list">
             <li class="navigation__item">
               <a
@@ -100,8 +113,10 @@
                   ></use>
                 </svg>
               </div>
-              <h3 class="box__title box__title--functional">Увага до дітей</h3>
-              <p class="function-text">
+              <h3 class="function__title function__title--functional">
+                Увага до дітей
+              </h3>
+              <p class="function__text">
                 Ідейні міркування, і навіть початок повсякденної роботи з
                 формування позиції.
               </p>
@@ -114,8 +129,10 @@
                   ></use>
                 </svg>
               </div>
-              <h3 class="box__title box__title--functional">Пунктуальність</h3>
-              <p class="function-text">
+              <h3 class="function__title function__title--functional">
+                Пунктуальність
+              </h3>
+              <p class="function__text">
                 Завдання організації, особливо рамки і місце навчання кадрів
                 тягне у себе.
               </p>
@@ -126,8 +143,10 @@
                   <use xlink:href="./images/icon.svg#icon-comp-functions"></use>
                 </svg>
               </div>
-              <h3 class="box__title box__title--functional">Планування</h3>
-              <p class="function-text">
+              <h3 class="function__title function__title--functional">
+                Планування
+              </h3>
+              <p class="function__text">
                 Так само консультація з широким активом значною мірою зумовлює.
               </p>
             </li>
@@ -139,10 +158,10 @@
                   ></use>
                 </svg>
               </div>
-              <h3 class="box__title box__altitle--function">
+              <h3 class="function__title function__title--functional">
                 Сучасні технології
               </h3>
-              <p class="function-text">
+              <p class="function__text">
                 Значимість цих проблем настільки очевидна, що реалізація
                 планових завдань.
               </p>
@@ -162,7 +181,6 @@
                   src="./images/occupation1.jpg"
                   alt="набирає текс на клавіатурі"
                   width="370"
-                  height="294"
                   class="ocupation__img"
                 />
                 <div class="ocupation__wrapper ocupation__wrapper--functional">
@@ -178,7 +196,6 @@
                   src="./images/occupation2.jpg"
                   alt="працює в телефоні та на ноутбуці"
                   width="370"
-                  height="294"
                   class="ocupation__img"
                 />
                 <div class="ocupation__wrapper ocupation__wrapper--functional">
@@ -194,7 +211,6 @@
                   src="./images/Occupation3.jpg"
                   alt="палітра кольорів на планшеті"
                   width="370"
-                  height="294"
                   class="ocupation__img"
                 />
                 <div class="ocupation__wrapper ocupation__wrapper--functional">
@@ -218,11 +234,10 @@
                 src="./images/photoproductdesigner.jpg"
                 alt="фото працівника"
                 width="270"
-                height="260"
                 class="team__img"
               />
               <div class="box-card">
-                <h3 class="box-card__title box-card__title--functional">
+                <h3 class="box-card__title box-card__title--function">
                   Ігор Дем'яненко
                 </h3>
                 <p class="box-card__text box-card__text--function">
@@ -289,11 +304,10 @@
                 src="./images/photodeveloper.jpg"
                 alt="фото працівника"
                 width="270"
-                height="260"
                 class="team__img"
               />
               <div class="box-card">
-                <h3 class="box-card__title box-card__title--functional">
+                <h3 class="box-card__title box-card__title--function">
                   Ольга Рєпіна
                 </h3>
                 <p class="box-card__text box-card__text--function">
@@ -360,11 +374,10 @@
                 src="./images/photomarketing.jpg"
                 alt="фото працівника"
                 width="270"
-                height="260"
                 class="team__img"
               />
               <div class="box-card">
-                <h3 class="box-card__title box-card__title--functional">
+                <h3 class="box-card__title box-card__title--function">
                   Микола Тарасов
                 </h3>
                 <p class="box-card__text box-card__text--function">Marketing</p>
@@ -429,11 +442,10 @@
                 src="./images/photodesiner.jpg"
                 alt="фото працівника"
                 width="270"
-                height="260"
                 class="team__img"
               />
               <div class="box-card">
-                <h3 class="box-card__title box-card__title--functional">
+                <h3 class="box-card__title box-card__title--function">
                   Микола Тарасов
                 </h3>
                 <p class="box-card__text box-card__text--function">Marketing</p>
@@ -606,85 +618,93 @@
     <!-- Footer -->
     <footer class="footer footer--functional">
       <div class="conteiner conteiner--footer">
-        <div class="box-footer">
-          <a href="./index.html" class="logo logo--functionalfooter"
-            ><span class="logo__span">Web</span>Studio</a
-          >
-          <address class="address">
-            <ul class="address__list list">
-              <li class="address__item">
+        <div class="adress-social-conteiner">
+          <div class="box-footer">
+            <a href="./index.html" class="logo logo--functionalfooter"
+              ><span class="logo__span">Web</span>Studio</a
+            >
+            <address class="address">
+              <ul class="address__list list">
+                <li class="address__item">
+                  <a
+                    href="https://goo.gl/maps/zR8tmQ1nPj9YPWna9"
+                    rel="noopener norefferer nofollow"
+                    target="_blank"
+                    class="address__link"
+                    >м. Київ, пр-т Лесі Українки, 26</a
+                  >
+                </li>
+                <li class="address__item">
+                  <a
+                    href="mailto:info@devstudio.com"
+                    class="address__link address__link--functional"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li class="address__item">
+                  <a
+                    href="tel:+380961111111"
+                    class="address__link address__link--functional"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="box-social">
+            <b class="box-social__text box-social__text--functional"
+              >Приєднуйтесь</b
+            >
+            <ul class="social-footer list">
+              <li class="social-footer__item">
                 <a
-                  href="https://goo.gl/maps/zR8tmQ1nPj9YPWna9"
+                  href=""
                   rel="noopener norefferer nofollow"
-                  target="_blank"
-                  class="address__link"
-                  >м. Київ, пр-т Лесі Українки, 26</a
-                >
+                  class="social-footer__link social-footer__link--sizelink link"
+                  ><svg width="20" height="20" class="social-footer__icon">
+                    <use
+                      xlink:href="./images/icon.svg#icon-icon-instagram"
+                    ></use>
+                  </svg>
+                </a>
               </li>
-              <li class="address__item">
+              <li class="social-footer__item">
                 <a
-                  href="mailto:info@devstudio.com"
-                  class="address__link address__link--functional"
-                  >info@devstudio.com</a
+                  href=""
+                  rel="noopener norefferer nofollow"
+                  class="social-footer__link social-footer__link--sizelink link"
                 >
+                  <svg width="20" height="20" class="social-footer__icon">
+                    <use xlink:href="./images/icon.svg#icon-icon-twitter"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="address__item">
+              <li class="social-footer__item">
                 <a
-                  href="tel:+380961111111"
-                  class="address__link address__link--functional"
-                  >+38 096 111 11 11</a
-                >
+                  href=""
+                  rel="noopener norefferer nofollow"
+                  class="social-footer__link social-footer__link--sizelink link"
+                  ><svg width="20" height="20" class="social-footer__icon">
+                    <use
+                      xlink:href="./images/icon.svg#icon-icon-facebook"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-footer__item">
+                <a
+                  href=""
+                  rel="noopener norefferer nofollow"
+                  class="social-footer__link social-footer__link--sizelink link"
+                  ><svg width="20" height="20" class="social-footer__icon">
+                    <use
+                      xlink:href="./images/icon.svg#icon-icon-linkedin"
+                    ></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-        <div class="box-social">
-          <b class="box-social__text box-social__text--functional"
-            >Приєднуйтесь</b
-          >
-          <ul class="social-footer list">
-            <li class="social-footer__item">
-              <a
-                href=""
-                rel="noopener norefferer nofollow"
-                class="social-footer__link social-footer__link--sizelink link"
-                ><svg width="20" height="20" class="social-footer__icon">
-                  <use xlink:href="./images/icon.svg#icon-icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-footer__item">
-              <a
-                href=""
-                rel="noopener norefferer nofollow"
-                class="social-footer__link social-footer__link--sizelink link"
-              >
-                <svg width="20" height="20" class="social-footer__icon">
-                  <use xlink:href="./images/icon.svg#icon-icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-footer__item">
-              <a
-                href=""
-                rel="noopener norefferer nofollow"
-                class="social-footer__link social-footer__link--sizelink link"
-                ><svg width="20" height="20" class="social-footer__icon">
-                  <use xlink:href="./images/icon.svg#icon-icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-footer__item">
-              <a
-                href=""
-                rel="noopener norefferer nofollow"
-                class="social-footer__link social-footer__link--sizelink link"
-                ><svg width="20" height="20" class="social-footer__icon">
-                  <use xlink:href="./images/icon.svg#icon-icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
         <div class="box-form">
           <b class="box-form__text box-form__text--functional"
@@ -700,7 +720,7 @@
               />
               <button type="submit" class="btn--footer btn">
                 Підписатися
-                <svg width="24" height="24" class="btn__svg">
+                <svg width="24" height="24" class="btn--footer__svg">
                   <use xlink:href="./images/icon.svg#icon-sendbtn"></use>
                 </svg>
               </button>
@@ -813,7 +833,82 @@
       </div>
     </div>
 
+    <!-- Mobil move menu -->
+
+    <div class="conteiner-menu js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg width="40" height="40" class="menu-toggle__svg">
+          <use xlink:href="./images/icon.svg#icon-modal-menu-close"></use>
+        </svg>
+      </button>
+
+      <nav class="navigation-mobil">
+        <ul class="navigation-mobil__list list">
+          <li class="navigation-mobil__item">
+            <a href="./index.html" class="navigation-mobil__link link">
+              <span class="navigation-mobil__current">Студія</span></a
+            >
+          </li>
+          <li class="navigation-mobil__item">
+            <a href="./portfolio.html" class="navigation-mobil__link link"
+              >Портфоліо</a
+            >
+          </li>
+          <li class="navigation-mobil__item">
+            <a href="" class="navigation-mobil__link link">Контакти</a>
+          </li>
+        </ul>
+      </nav>
+      <ul class="contact-mobil list">
+        <li class="contact-mobil__item">
+          <a
+            href="tel:+380961111111"
+            class="contact-mobil__link contact-mobil__link--colorblue link"
+          >
+            +38 096 111 11 11</a
+          >
+        </li>
+        <li class="contact-mobil__item">
+          <a
+            href="mailto:info@devstudio.com"
+            target="_blank"
+            class="contact-mobil__link link"
+          >
+            info@devstudio.com</a
+          >
+        </li>
+      </ul>
+
+      <ul class="social-mobil list">
+        <li class="social-mobil__item">
+          <a href="" class="social-mobil__link social-mobil__link--element link"
+            >Instagram</a
+          >
+        </li>
+        <li class="social-mobil__item">
+          <a href="" class="social-mobil__link social-mobil__link--element link"
+            >Twitter</a
+          >
+        </li>
+        <li class="social-mobil__item">
+          <a href="" class="social-mobil__link social-mobil__link--element link"
+            >Facebook</a
+          >
+        </li>
+        <li class="social-mobil__item">
+          <a href="" class="social-mobil__link link">LinkedIn</a>
+        </li>
+      </ul>
+    </div>
+
     <!-- Java script -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

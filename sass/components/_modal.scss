@@ -1,14 +1,20 @@
 .backdrop {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
 
   background-color: var(--color-bg-ocupation-text);
 
+  @include table-max {
+    padding: 93px 15px;
+  }
+
   &.is-hidden .modal {
-    transform: scale(1.2) translate(-50%, -50%);
+    @include table-min {
+      transform: scale(1.2) translate(-50%, -50%);
+    }
   }
 }
 
@@ -21,14 +27,21 @@
 
   &--finctional {
     position: absolute;
-    width: 528px;
-    height: 581px;
-    top: 50%;
-    left: 50%;
-    padding: 40px 39px 40px 41px;
-    transform: scale(1) translate(-50%, -50%);
 
-    transition: transform 250ms var(--cubic-all);
+    padding: 40px 40px 40px 40px;
+
+    @include table-min {
+      top: 50%;
+      left: 50%;
+      width: 450px;
+      height: 609px;
+      transform: scale(1) translate(-50%, -50%);
+      transition: transform 250ms var(--cubic-all);
+    }
+    @include desktop-min {
+      width: 528px;
+      height: 581px;
+    }
   }
 
   &__button {
@@ -108,7 +121,11 @@
   }
 
   &__labelcheckbox {
-    @include font(14px, 400, 1.7, 0.03em);
+    @include font(12px, 400, 1.7, 0.03em);
+
+    @include desktop-min {
+      @include font(14px, 400, 1.7, 0.03em);
+    }
 
     &--functional {
       @include flex-centered;
@@ -227,4 +244,15 @@
 .form-modal__inputcheckbox:checked + .form-modal__labelcheckbox .box-checkbox {
   background-color: var(--color-text-logonav);
   border: 3px solid var(--color-text-logonav);
+}
+
+// Modal
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.no-scroll {
+  overflow: hidden;
 }

@@ -1,22 +1,55 @@
 .header {
   border-bottom: 1px solid var(--color-border-header);
+
+  @include table-max {
+    padding: 10px 0;
+  }
+}
+
+.header .conteiner--header {
+  display: flex;
+  align-items: center;
 }
 
 .conteiner--header {
-  @include flex-centered;
+  @include table-min {
+    @include flex-centered;
+  }
 }
 
 // Navigation
 
 .navigation {
-  @include flex-centered;
+  display: flex;
+  align-items: center;
+
+  @include table-max {
+    width: 100%;
+  }
+
+  @include table-max {
+    justify-content: space-between;
+  }
 
   &__list {
-    @include flex-centered;
+    @include table-max {
+      display: none;
+    }
+
+    @include table-min {
+      @include flex-centered;
+      margin-left: 87px;
+    }
+
+    @include desktop-min {
+      margin-left: 92px;
+    }
   }
 
   &__item:not(:first-child) {
-    margin-left: 50px;
+    @include table-min {
+      margin-left: 50px;
+    }
   }
 
   &__link {
@@ -25,11 +58,13 @@
     @include font(14px, 500, 1, 1 0.2em);
 
     &--functional {
-      position: relative;
-      display: block;
-      padding: 32px 0;
+      @include table-min {
+        position: relative;
+        display: block;
+        padding: 32px 0;
 
-      transition: color 250ms var(--cubic-all);
+        transition: color 250ms var(--cubic-all);
+      }
     }
   }
 
@@ -56,21 +91,38 @@
 // Contacts header
 
 .contact {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
+  @include table-max {
+    display: none;
+  }
+  @include table-min {
+    display: inline-block;
+    align-items: center;
+    margin-left: auto;
+
+    @include desktop-min {
+      display: flex;
+    }
+  }
 
   &__item:not(:last-child) {
-    margin-right: 40px;
+    @include desktop-min {
+      margin-right: 30px;
+    }
   }
 
   &__link {
     color: var(--color-primery-text);
 
-    @include font(14px, 500, 1.1, 0.02em);
+    @include table-min {
+      @include font(12px, 500, 1.1, 0.02em);
+    }
 
+    @include desktop-min {
+      @include font(14px, 500, 1.1, 0.02em);
+    }
     &--functional {
-      @include flex-centered;
+      display: flex;
+      align-items: center;
       padding: 5px;
 
       transition: color 250ms var(--cubic-all);
@@ -83,7 +135,13 @@
   }
 
   &__svg {
-    margin-right: 10px;
+    @include table-min {
+      margin-right: 8px;
+    }
+
+    @include desktop-min {
+      margin-right: 10px;
+    }
 
     fill: currentColor;
 

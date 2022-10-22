@@ -1,20 +1,35 @@
 .conteiner {
-  width: 1200px;
-  margin: auto;
+  max-width: 480px;
+  margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
-  //   outline: 1px solid tomato;
+  // outline: 1px solid tomato;
+
+  @include table-min {
+    max-width: 768px;
+  }
+
+  @include desktop-min {
+    max-width: 1200px;
+  }
 }
 
 // All properties
 .title {
   color: var(--color-secondery-text);
 
-  @include font(36px, 700, 1.2, 0.03em);
+  @include font(28px, 700, 1.2, 0.03em);
 
+  @include desktop-min {
+    @include font(36px, 700, 1.2, 0.03em);
+  }
   &--functional {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+
+    @include desktop-min {
+      margin-bottom: 50px;
+    }
   }
 }
 
@@ -42,15 +57,4 @@
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   margin: -1px;
-}
-
-// Modal
-.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-.no-scroll {
-  overflow: hidden;
 }

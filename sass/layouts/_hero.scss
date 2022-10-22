@@ -1,7 +1,10 @@
 .hero {
   text-align: center;
-  padding: 200px;
-  padding-bottom: 200px;
+  padding: 118px 0;
+
+  @include desktop-min {
+    padding: 200px 0;
+  }
   max-width: 1600px;
   min-height: 600px;
   margin: 0 auto;
@@ -21,12 +24,19 @@
   &__title {
     color: var(--color-hero-title);
 
-    @include font(44px, 900, 1.4, 0.06em);
+    @include font(26px, 900, 1.6, 0.06em);
     text-transform: uppercase;
 
+    @include desktop-min {
+      @include font(44px, 900, 1.4, 0.06em);
+    }
+
     &--functional {
-      max-width: 696px;
       margin: 0 auto 30px;
+      max-width: 360px;
+      @include desktop-min {
+        max-width: 696px;
+      }
     }
   }
 }

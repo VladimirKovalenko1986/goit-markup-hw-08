@@ -1,15 +1,31 @@
 .clients {
-  padding: 94px 0;
-
+  @include desktop-max {
+    padding: 60px 0;
+  }
+  @include desktop-min {
+    padding: 94px 0;
+  }
   &__list {
     display: flex;
+
+    @include desktop-max {
+      flex-wrap: wrap;
+      gap: 30px;
+    }
   }
 
   &__item {
-    width: calc((100% - 150px) / 6);
-
-    &:not(:first-child) {
-      margin-left: 30px;
+    @include table-max {
+      width: calc((100% - 30px) / 2);
+    }
+    @include table-min {
+      width: calc((100% - 60px) / 3);
+    }
+    @include desktop-min {
+      width: calc((100% - 150px) / 6);
+      &:not(:first-child) {
+        margin-left: 30px;
+      }
     }
   }
 

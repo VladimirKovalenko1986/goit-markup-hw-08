@@ -2,13 +2,14 @@
   display: block;
   text-decoration: none;
 
+  @include font(24px, 700, 1.2, 0.03em);
   font-family: "Raleway", sans-serif;
 
-  @include font(26px, 700, 1.2, 0.03em);
+  @include desktop-min {
+    @include font(26px, 700, 1.2, 0.03em);
+  }
 
   &--functionalheader {
-    margin-right: 93px;
-
     color: var(--color-logo-text);
   }
 
