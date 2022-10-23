@@ -21,6 +21,7 @@
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     }
   }
+
   // footer
 
   &--footer {
@@ -52,7 +53,7 @@
     }
   }
 
-  //   // Portfolio
+  // Portfolio
 
   &__functional {
     min-width: 73px;
@@ -76,6 +77,7 @@
   }
 
   // Modal
+
   &__modal {
     @include elment-centered;
     padding: 10px 52px;
