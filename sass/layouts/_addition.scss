@@ -20,8 +20,22 @@
     }
   }
 
-  &__item:not(:first-child) {
-    margin-left: 8px;
+  &__item {
+    &:not(:nth-child(3n + 1)) {
+      @include table-max {
+        margin-left: 8px;
+      }
+    }
+    &:not(:nth-child(n + 4)) {
+      @include table-max {
+        margin-bottom: 15px;
+      }
+    }
+    &:not(:first-child) {
+      @include table-min {
+        margin-left: 8px;
+      }
+    }
   }
 }
 
