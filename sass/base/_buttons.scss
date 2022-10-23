@@ -53,25 +53,27 @@
   }
 
   //   // Portfolio
-  //   &__functional {
-  //     // min-width: 73px;
-  //     // padding: 6px 22px;
 
-  //     // color: var(--color-secondery-text);
-  //     // background-color: var(--color-bgn-btn);
+  &__functional {
+    min-width: 73px;
+    padding: 6px 22px;
 
-  //     // font-weight: 500;
+    color: var(--color-secondery-text);
+    background-color: var(--color-bgn-btn);
 
-  //     // transition: background-color 250ms var(--cubic-all),
-  //     //   color 250ms var(--cubic-all), box-shadow 250ms var(--cubic-all);
+    font-weight: 500;
 
-  //     &:hover,
-  //     &:focus {
-  //       // background-color: var(--color-text-logonav);
-  //       // color: var(--color-hero-title);
-  //       // box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
-  //       //   0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-  //     }
+    transition: background-color 250ms var(--cubic-all),
+      color 250ms var(--cubic-all), box-shadow 250ms var(--cubic-all);
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-text-logonav);
+      color: var(--color-hero-title);
+      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+        0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+  }
 
   // Modal
   &__modal {

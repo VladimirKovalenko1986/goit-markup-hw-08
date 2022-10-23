@@ -1,11 +1,23 @@
 .addition {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding: 60px 0;
+
+  @include desktop-min {
+    padding: 94px 0;
+  }
 
   &__list {
-    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
 
-    @include flex-centered;
+    @include table-min {
+      margin-bottom: 30px;
+      @include flex-centered;
+    }
+
+    @include desktop-min {
+      margin-bottom: 50px;
+    }
   }
 
   &__item:not(:first-child) {
@@ -14,20 +26,40 @@
 }
 
 .pictures {
-  display: flex;
-  flex-wrap: wrap;
+  @include table-min {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    gap: 30px;
+  }
 
   &__item {
-    width: calc((100% - 60px) / 3);
-
+    width: 100%;
     border-top: none;
+    @include table-min {
+      width: calc((100% - 30px) / 2);
+    }
+    @include desktop-min {
+      width: calc((100% - 60px) / 3);
+    }
+
+    &:not(:last-child) {
+      @include table-max {
+        margin-bottom: 30px;
+      }
+    }
 
     &:not(:nth-child(3n + 3)) {
-      margin-right: 30px;
+      @include desktop-min {
+        margin-right: 30px;
+      }
     }
 
     &:not(:nth-last-child(-n + 3)) {
-      margin-bottom: 30px;
+      @include desktop-min {
+        margin-bottom: 30px;
+      }
     }
 
     &:hover .card-img__text {
@@ -37,6 +69,7 @@
 
   &__link {
     display: block;
+    width: 100%;
 
     transition: box-shadow 250ms var(--cubic-all);
 
@@ -60,8 +93,6 @@
   }
 
   &__text {
-    // text-decoration: none;
-
     @include font(18px, 400, 1.6, 0.03em);
 
     color: var(--color-hero-title);
@@ -73,10 +104,17 @@
       left: 0;
       width: 100%;
       height: 100%;
-      padding: 63px 24px;
+      padding: 77px 24px;
 
       transform: translateY(101%);
       transition: transform 250ms var(--cubic-all);
+
+      @include table-min {
+        padding: 49px 24px 77px;
+      }
+    }
+    @include desktop-min {
+      padding: 63px 24px;
     }
   }
 }
@@ -92,10 +130,15 @@
 
     @include font(18px, 700, 2, 0.06em);
 
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      height: 72px;
+    }
+    @include desktop-min {
+      @include font(18px, 700, 2, 0.03em);
+    }
+
     &--fuctional {
       margin-bottom: 4px;
-      max-width: 322px;
-      border-top: none;
     }
   }
 
@@ -105,7 +148,6 @@
     @include font(16px, 400, 1.9, 0.03em);
 
     &--functional {
-      max-width: 322px;
     }
   }
 }
