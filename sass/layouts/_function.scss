@@ -8,7 +8,8 @@
   &__list {
     @include table-min {
       display: flex;
-      @media screen and(min-width: 768px) and (max-width: 1199px) {
+
+      @include tablemin-dasktopmax {
         flex-wrap: wrap;
         gap: 30px;
       }
@@ -22,12 +23,13 @@
       }
     }
 
-    @media screen and(min-width: 768px) and (max-width: 1199px) {
+    @include tablemin-dasktopmax {
       width: calc((100% - 30px) / 2);
     }
 
     @include desktop-min {
       width: calc((100% - 90px) / 4);
+
       &:not(:first-child) {
         margin-left: 30px;
       }

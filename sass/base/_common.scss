@@ -1,8 +1,7 @@
 .conteiner {
   max-width: 480px;
   margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 15px;
   // outline: 1px solid tomato;
 
   @include table-min {
@@ -15,6 +14,7 @@
 }
 
 // All properties
+
 .title {
   color: var(--color-secondery-text);
 

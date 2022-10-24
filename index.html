@@ -183,12 +183,20 @@
           <ul class="ocupation__list list">
             <li class="ocupation__item">
               <div class="ocupation__conteiner">
-                <img
-                  src="./images/occupation1.jpg"
-                  alt="набирає текс на клавіатурі"
-                  width="370"
-                  class="ocupation__img"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/occupation/occupation-alfa-desktop-1x.jpg 1x,
+                      ./images/occupation/occupation-alfa-desktop-2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    class="ocupation__img"
+                    src="./images/occupation/occupation-alfa-desktop-1x.jpg"
+                    alt="desktop applications"
+                  />
+                </picture>
                 <div class="ocupation__wrapper ocupation__wrapper--functional">
                   <p class="ocupation__text ocupation__text--functional">
                     Десктопні додатки
@@ -198,12 +206,20 @@
             </li>
             <li class="ocupation__item">
               <div class="ocupation__conteiner">
-                <img
-                  src="./images/occupation2.jpg"
-                  alt="працює в телефоні та на ноутбуці"
-                  width="370"
-                  class="ocupation__img"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/occupation/occupation-amega-desktop-1x.jpg 1x,
+                      ./images/occupation/occupation-amega-desktop-2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    class="ocupation__img"
+                    src="./images/occupation/occupation-amega-desktop-1x.jpg"
+                    alt="mobile pictures"
+                  />
+                </picture>
                 <div class="ocupation__wrapper ocupation__wrapper--functional">
                   <p class="ocupation__text ocupation__text--functional">
                     Мобільні додатки
@@ -213,12 +229,20 @@
             </li>
             <li class="ocupation__item">
               <div class="ocupation__conteiner">
-                <img
-                  src="./images/Occupation3.jpg"
-                  alt="палітра кольорів на планшеті"
-                  width="370"
-                  class="ocupation__img"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/occupation/occupation-delta-desktop-1x.jpg 1x,
+                      ./images/occupation/occupation-delta-desktop-2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    class="ocupation__img"
+                    src="./images/occupation/occupation-delta-desktop-1x.jpg"
+                    alt="on the screen of the tablet color palette"
+                  />
+                </picture>
                 <div class="ocupation__wrapper ocupation__wrapper--functional">
                   <p class="ocupation__text ocupation__text--functional">
                     Дизайнерські рішення
@@ -237,12 +261,36 @@
           <h2 class="title title--functional">Наша команда</h2>
           <ul class="team__list list">
             <li class="team__item team__item--function">
-              <img
-                src="./images/photoproductdesigner.jpg"
-                alt="фото працівника"
-                width="270"
-                class="team__img"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/desktop/team-man-red-desktop-1x.jpg 1x,
+                    ./images/team/desktop/team-man-red-desktop-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/team/table/team-man-red-table-1x.jpg 1x,
+                    ./images/team/table/team-man-red-table-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/team/mobile/team-man-red-mobile-1x.jpg 1x,
+                    ./images/team/mobile/team-man-red-mobile-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  class="ocupation__img"
+                  src="./images/team/desktop/team-man-red-desktop-1x.jpg 1x"
+                  alt="man in red shirt"
+                />
+              </picture>
               <div class="box-card">
                 <h3 class="box-card__title box-card__title--function">
                   Ігор Дем'яненко
@@ -307,12 +355,36 @@
               </div>
             </li>
             <li class="team__item team__item--function">
-              <img
-                src="./images/photodeveloper.jpg"
-                alt="фото працівника"
-                width="270"
-                class="team__img"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/desktop/team-women-desktop-1x.jpg 1x,
+                    ./images/team/desktop/team-women-desktop-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/team/table/team-women-table-1x.jpg 1x,
+                    ./images/team/table/team-women-table-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/team/mobile/team-women-mobile-1x.jpg 1x,
+                    ./images/team/mobile/team-women-mobile-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  class="ocupation__img"
+                  src="./images/team/desktop/team-women-desktop-1x.jpg 1x"
+                  alt="women in black shirt"
+                />
+              </picture>
               <div class="box-card">
                 <h3 class="box-card__title box-card__title--function">
                   Ольга Рєпіна
@@ -377,12 +449,36 @@
               </div>
             </li>
             <li class="team__item team__item--function">
-              <img
-                src="./images/photomarketing.jpg"
-                alt="фото працівника"
-                width="270"
-                class="team__img"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/desktop/team-man-blue-desktop-1x.jpg 1x,
+                    ./images/team/desktop/team-man-blue-desktop-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/team/table/team-man-blue-table-1x.jpg 1x,
+                    ./images/team/table/team-man-blue-table-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/team/mobile/team-man-blue-mobile-1x.jpg 1x,
+                    ./images/team/mobile/team-man-blue-mobile-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  class="ocupation__img"
+                  src="./images/team/desktop/team-man-blue-desktop-1x.jpg 1x"
+                  alt="man in blue shirt"
+                />
+              </picture>
               <div class="box-card">
                 <h3 class="box-card__title box-card__title--function">
                   Микола Тарасов
@@ -445,12 +541,36 @@
               </div>
             </li>
             <li class="team__item team__item--function">
-              <img
-                src="./images/photodesiner.jpg"
-                alt="фото працівника"
-                width="270"
-                class="team__img"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/desktop/team-man-black-desktop-1x.jpg 1x,
+                    ./images/team/desktop/team-man-black-desktop-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/team/table/team-man-black-table-1x.jpg 1x,
+                    ./images/team/table/team-man-black-table-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/team/mobile/team-man-black-mobile-1x.jpg 1x,
+                    ./images/team/mobile/team-man-black-mobile-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  class="ocupation__img"
+                  src="./images/team/desktop/team-man-black-desktop-1x.jpg 1x"
+                  alt="man in black shirt"
+                />
+              </picture>
               <div class="box-card">
                 <h3 class="box-card__title box-card__title--function">
                   Микола Тарасов

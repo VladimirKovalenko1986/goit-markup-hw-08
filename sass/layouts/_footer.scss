@@ -1,5 +1,6 @@
 .footer {
   background-color: var(--color-bgn-hero);
+
   @include desktop-max {
     text-align: center;
   }
@@ -15,11 +16,12 @@
 }
 
 .adress-social-conteiner {
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @include tablemin-dasktopmax {
     display: flex;
     padding: 0 74px 0 61px;
     margin-bottom: 60px;
   }
+
   @include desktop-min {
     display: flex;
   }
@@ -61,17 +63,20 @@
   }
 }
 .box-social {
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @include tablemin-dasktopmax {
     margin-top: 5px;
   }
+
   @include table-max {
     margin-bottom: 60px;
   }
-  @include desktop-max {
-    margin-left: auto;
-  }
+
   @include desktop-min {
     margin-left: 70px;
+  }
+
+  @include desktop-max {
+    margin-left: auto;
   }
 
   &__text {
@@ -124,6 +129,7 @@
 
   &__text {
     color: var(--color-hero-title);
+
     @include font(14px, 700, 1.1, 0.03em);
     text-transform: uppercase;
 
@@ -157,9 +163,11 @@
     height: 50px;
     padding-left: 16px;
     border-radius: 4px;
+
     @include table-min {
       width: 450px;
     }
+
     @include desktop-min {
       width: 358px;
     }
