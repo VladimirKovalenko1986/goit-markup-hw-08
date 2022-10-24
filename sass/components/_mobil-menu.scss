@@ -2,9 +2,9 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  padding: 48px 40px;
+  min-width: 480px;
+  min-height: 796px;
+  padding: 48px 84px 48px 40px;
   background-color: var(--color-hero-title);
   z-index: 999;
 
