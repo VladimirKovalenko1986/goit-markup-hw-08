@@ -1,13 +1,25 @@
 .hero {
   text-align: center;
   padding: 118px 0;
+  max-width: 100vw;
+  max-height: 100vh;
+  margin: 0 auto;
+
+  @include mobile-min {
+    max-width: 480px;
+    max-height: 400px;
+  }
+
+  @include table-min {
+    max-width: 768px;
+    max-height: 400px;
+  }
 
   @include desktop-min {
+    max-width: 1600px;
+    max-height: 600px;
     padding: 200px 0;
   }
-  max-width: 1600px;
-  min-height: 600px;
-  margin: 0 auto;
 
   &--bg {
     background-position: center;
@@ -35,14 +47,14 @@
           rgba(47, 48, 58, 0.4)
         ),
         url("../images/hero/hero-table-1x.jpg");
-    }
 
-    @include retina {
-      background-image: linear-gradient(
-          rgba(47, 48, 58, 0.4),
-          rgba(47, 48, 58, 0.4)
-        ),
-        url("../images/hero/hero-table-2x.jpg");
+      @include retina {
+        background-image: linear-gradient(
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)
+          ),
+          url("../images/hero/hero-table-2x.jpg");
+      }
     }
 
     @include desktop-min {
@@ -51,14 +63,13 @@
           rgba(47, 48, 58, 0.4)
         ),
         url("../images/hero/hero-desktop-1x.jpg");
-    }
-
-    @include retina {
-      background-image: linear-gradient(
-          rgba(47, 48, 58, 0.4),
-          rgba(47, 48, 58, 0.4)
-        ),
-        url("../images/hero/hero-desktop-2x.jpg");
+      @include retina {
+        background-image: linear-gradient(
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)
+          ),
+          url("../images/hero/hero-desktop-2x.jpg");
+      }
     }
   }
 

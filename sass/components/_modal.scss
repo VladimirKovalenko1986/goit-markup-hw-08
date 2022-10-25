@@ -26,21 +26,29 @@
   background-color: var(--color-hero-title);
 
   &--finctional {
-    position: absolute;
-    width: 450px;
+    position: relative;
+    max-width: 450px;
+    width: 100%;
+    min-height: 609px;
 
-    padding: 40px 40px 40px 40px;
+    padding: 40px 20px;
+
+    @include mobile-min {
+      padding: 40px;
+    }
 
     @include table-min {
       top: 50%;
       left: 50%;
-      height: 609px;
+
       transform: scale(1) translate(-50%, -50%);
       transition: transform 250ms var(--cubic-all);
     }
+
     @include desktop-min {
-      min-width: 528px;
-      height: 581px;
+      max-width: 528px;
+      width: 100%;
+      min-height: 581px;
     }
   }
 
@@ -102,8 +110,13 @@
     }
 
     &--checkbox {
-      @include flex-centered;
+      display: flex;
       margin-bottom: 30px;
+
+      @include mobile-min {
+        @include flex-centered;
+        flex-direction: row;
+      }
     }
   }
 
@@ -219,20 +232,24 @@
 
 // Link checkbox
 .form-modal__link {
+  @include font(10px, 400, 1.7, 0.03em);
   color: var(--color-text-logonav);
 
   &--functional {
     position: relative;
     display: block;
     text-decoration: none;
-    margin-left: 5px;
+
+    @include mobile-min {
+      margin-left: 5px;
+    }
   }
 
   &::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: 5px;
+    bottom: 0px;
     width: 100%;
     height: 0.5px;
 

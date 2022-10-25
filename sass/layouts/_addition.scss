@@ -9,8 +9,15 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 40px;
+    width: 100%;
+    max-width: 290px;
+
+    @include mobile-min {
+      max-width: 336px;
+    }
 
     @include table-min {
+      max-width: calc((100 - 2) * 15px);
       margin-bottom: 30px;
       @include flex-centered;
     }
@@ -21,18 +28,26 @@
   }
 
   &__item {
-    &:not(:nth-child(3n + 1)) {
-      @include table-max {
+    @media screen and (max-width: 479px) {
+      &:not(:nth-child(odd)) {
         margin-left: 8px;
       }
-    }
-    &:not(:nth-child(n + 4)) {
-      @include table-max {
+      &:not(:last-child) {
         margin-bottom: 15px;
       }
     }
-    &:not(:first-child) {
-      @include table-min {
+    @media screen and(min-width: 480px) and(max-width:767px) {
+      &:not(:nth-child(3n + 1)) {
+        margin-left: 8px;
+      }
+
+      &:not(:nth-child(n + 4)) {
+        margin-bottom: 15px;
+      }
+    }
+
+    @include table-min {
+      &:not(:first-child) {
         margin-left: 8px;
       }
     }
