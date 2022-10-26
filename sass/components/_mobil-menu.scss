@@ -1,10 +1,12 @@
 .conteiner-menu {
+  display: flex;
+  flex-direction: column;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   max-width: 480px;
-  max-height: 796px;
+  height: 100%;
   padding: 48px 0px 48px 40px;
   background-color: var(--color-hero-title);
   z-index: 999;
@@ -52,7 +54,7 @@
 // Navigation
 
 .navigation-mobil {
-  margin-bottom: 302px;
+  margin-bottom: auto;
 
   &__item:not(:last-child) {
     margin-bottom: 32px;

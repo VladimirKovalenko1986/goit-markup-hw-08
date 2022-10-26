@@ -4,10 +4,11 @@
   position: fixed;
   top: 0;
   left: 0;
+  padding: 30px 15px;
 
   background-color: var(--color-bg-ocupation-text);
 
-  @include table-max {
+  @include mobile-min {
     padding: 93px 15px;
   }
 
@@ -134,7 +135,11 @@
   }
 
   &__labelcheckbox {
-    @include font(12px, 400, 1.7, 0.03em);
+    @include font(11px, 400, 1.7, 0.03em);
+
+    @include mobile-min {
+      @include font(12px, 400, 1.7, 0.03em);
+    }
 
     @include desktop-min {
       @include font(14px, 400, 1.7, 0.03em);
@@ -230,6 +235,15 @@
   }
 }
 
+.conteiner-link {
+  display: flex;
+  justify-content: center;
+
+  @media screen and (max-width: 479px) {
+    margin-top: 10px;
+  }
+}
+
 // Link checkbox
 .form-modal__link {
   @include font(10px, 400, 1.7, 0.03em);
@@ -250,10 +264,14 @@
     position: absolute;
     left: 0;
     bottom: 0px;
-    width: 100%;
+    width: 90px;
     height: 0.5px;
 
     background-color: var(--color-text-logonav);
+
+    @include mobile-min {
+      width: 100%;
+    }
   }
 }
 
