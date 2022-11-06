@@ -1,293 +1,294 @@
 .backdrop {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 30px 15px;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 30px 15px;
 
-  background-color: var(--color-bg-ocupation-text);
+    background-color: var(--color-bg-ocupation-text);
 
-  @include mobile-min {
-    padding: 93px 15px;
-  }
-
-  &.is-hidden .modal {
-    @include table-min {
-      transform: scale(1.2) translate(-50%, -50%);
+    @include mobile-min {
+        padding: 93px 15px;
     }
-  }
+
+    &.is-hidden .modal {
+        @include table-min {
+            transform: scale(1.2) translate(-50%, -50%);
+        }
+    }
 }
 
 .modal {
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-
-  background-color: var(--color-hero-title);
-
-  &--finctional {
-    position: relative;
-    max-width: 450px;
-    width: 100%;
-    min-height: 609px;
-
-    padding: 40px 20px;
-
-    @include mobile-min {
-      padding: 40px;
-    }
-
-    @include table-min {
-      top: 50%;
-      left: 50%;
-
-      transform: scale(1) translate(-50%, -50%);
-      transition: transform 250ms var(--cubic-all);
-    }
-
-    @include desktop-min {
-      max-width: 528px;
-      width: 100%;
-      min-height: 581px;
-    }
-  }
-
-  &__button {
-    position: absolute;
-    @include flex-centered;
-
-    padding: 0;
-    top: 8px;
-    right: 8px;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    // outline: 1px solid tomato;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
 
     background-color: var(--color-hero-title);
 
-    &:hover .modal__svg,
-    &:focus .modal__svg {
-      fill: var(--color-text-logonav);
-    }
-  }
+    &--finctional {
+        position: relative;
+        max-width: 450px;
+        width: 100%;
+        min-height: 609px;
 
-  &__svg {
-    fill: var(--color-logo-text);
-  }
+        padding: 40px 20px;
+
+        @include mobile-min {
+            padding: 40px;
+        }
+
+        @include table-min {
+            top: 50%;
+            left: 50%;
+
+            transform: scale(1) translate(-50%, -50%);
+            transition: transform 250ms var(--cubic-all);
+        }
+
+        @include desktop-min {
+            max-width: 528px;
+            width: 100%;
+            min-height: 581px;
+        }
+    }
+
+    &__button {
+        position: absolute;
+        @include flex-centered;
+
+        padding: 0;
+        top: 8px;
+        right: 8px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        // outline: 1px solid tomato;
+
+        background-color: var(--color-hero-title);
+
+        &:hover .modal__svg,
+        &:focus .modal__svg {
+            fill: var(--color-text-logonav);
+        }
+    }
+
+    &__svg {
+        fill: var(--color-logo-text);
+    }
 }
 
 // Form modal
 
 .form-modal {
-  @include font(12px, 400, 1.2, 0.01em);
+    @include font(12px, 400, 1.2, 0.01em);
 
-  &__text {
-    @include font(20px, 700, 1.2, 0.03em);
+    &__text {
+        @include font(20px, 700, 1.2, 0.03em);
 
-    color: var(--color-secondery-text);
+        color: var(--color-secondery-text);
 
-    &--functional {
-      margin-bottom: 12px;
-      text-align: center;
-    }
-  }
-
-  &__label {
-    margin-bottom: 4px;
-  }
-
-  // conteiner form modal
-  &__conteiner {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-
-    &--coment {
-      margin-bottom: 20px;
+        &--functional {
+            margin-bottom: 12px;
+            text-align: center;
+        }
     }
 
-    &--checkbox {
-      display: flex;
-      margin-bottom: 30px;
-
-      @include mobile-min {
-        @include flex-centered;
-        flex-direction: row;
-      }
-    }
-  }
-
-  &__inputcheckbox {
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    margin: 1px;
-  }
-
-  &__labelcheckbox {
-    @include font(11px, 400, 1.7, 0.03em);
-
-    @include mobile-min {
-      @include font(12px, 400, 1.7, 0.03em);
+    &__label {
+        margin-bottom: 4px;
     }
 
-    @include desktop-min {
-      @include font(14px, 400, 1.7, 0.03em);
+    // conteiner form modal
+    &__conteiner {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+
+        &--coment {
+            margin-bottom: 20px;
+        }
+
+        &--checkbox {
+            display: flex;
+            margin-bottom: 30px;
+
+            @include mobile-min {
+                @include flex-centered;
+                flex-direction: row;
+            }
+        }
     }
 
-    &--functional {
-      @include flex-centered;
+    &__inputcheckbox {
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        border: 0;
+        padding: 0;
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        margin: 1px;
     }
 
-    &:hover {
-      cursor: pointer;
+    &__labelcheckbox {
+        @include font(11px, 400, 1.7, 0.03em);
+
+        @include mobile-min {
+            @include font(12px, 400, 1.7, 0.03em);
+        }
+
+        @include desktop-min {
+            @include font(14px, 400, 1.7, 0.03em);
+        }
+
+        &--functional {
+            @include flex-centered;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
     }
-  }
 }
 
 // conteiner form
 .card-form {
-  position: relative;
+    position: relative;
 
-  &__input {
-    outline: none;
-    border: 1px solid var(--color-border-modal);
+    &__input {
+        outline: none;
+        border: 1px solid var(--color-border-modal);
 
-    &--functional {
-      width: 100%;
-      height: 40px;
-      padding-left: 42px;
-      border-radius: 4px;
+        &--functional {
+            width: 100%;
+            height: 40px;
+            padding-left: 42px;
+            border-radius: 4px;
 
-      transition: border 250ms var(--cubic-all), fill 250ms var(--cubic-all);
+            transition: border 250ms var(--cubic-all),
+                fill 250ms var(--cubic-all);
+        }
+
+        &:focus {
+            border: 1px solid var(--color-text-logonav);
+        }
+
+        &:focus + .card-form__svg {
+            fill: var(--color-text-logonav);
+        }
     }
 
-    &:focus {
-      border: 1px solid var(--color-text-logonav);
+    &__svg {
+        fill: var(--color-secondery-text);
+
+        &--functional {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            margin-left: 12px;
+
+            transform: translateY(-50%);
+        }
     }
-
-    &:focus + .card-form__svg {
-      fill: var(--color-text-logonav);
-    }
-  }
-
-  &__svg {
-    fill: var(--color-secondery-text);
-
-    &--functional {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      margin-left: 12px;
-
-      transform: translateY(-50%);
-    }
-  }
 }
 
 // textarea
 
 .form-modal__conteiner--coment textarea {
-  padding: 12px 16px;
-  resize: none;
-  height: 120px;
-  border-radius: 4px;
-  outline: none;
-  border: 1px solid var(--color-border-modal);
+    padding: 12px 16px;
+    resize: none;
+    height: 120px;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid var(--color-border-modal);
 
-  transition: border 250ms var(--cubic-all);
+    transition: border 250ms var(--cubic-all);
 
-  &:focus {
-    border: 1px solid var(--color-text-logonav);
-  }
+    &:focus {
+        border: 1px solid var(--color-text-logonav);
+    }
 
-  &::placeholder {
-    color: var(--color-modal-textera);
-  }
+    &::placeholder {
+        color: var(--color-modal-textera);
+    }
 }
 
 // Swap icon checkbox
 .box-checkbox {
-  border-radius: 3px;
-  border: 3px solid var(--color-secondery-text);
+    border-radius: 3px;
+    border: 3px solid var(--color-secondery-text);
 
-  &--functional {
-    @include flex-centered;
+    &--functional {
+        @include flex-centered;
 
-    margin-right: 8px;
-    width: 15px;
-    height: 15px;
-  }
+        margin-right: 8px;
+        width: 15px;
+        height: 15px;
+    }
 
-  &__svg {
-    //   outline: 1px solid tomato;
-    fill: var(--color-hero-title);
-  }
+    &__svg {
+        //   outline: 1px solid tomato;
+        fill: var(--color-hero-title);
+    }
 }
 
 .conteiner-link {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 
-  @media screen and (max-width: 479px) {
-    margin-top: 10px;
-  }
+    @media screen and (max-width: 479px) {
+        margin-top: 10px;
+    }
 }
 
 // Link checkbox
 .form-modal__link {
-  @include font(10px, 400, 1.7, 0.03em);
-  color: var(--color-text-logonav);
+    @include font(10px, 400, 1.7, 0.03em);
+    color: var(--color-text-logonav);
 
-  &--functional {
-    position: relative;
-    display: block;
-    text-decoration: none;
+    &--functional {
+        position: relative;
+        display: block;
+        text-decoration: none;
 
-    @include mobile-min {
-      margin-left: 5px;
+        @include mobile-min {
+            margin-left: 5px;
+        }
     }
-  }
 
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0px;
-    width: 90px;
-    height: 0.5px;
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+        width: 90px;
+        height: 0.5px;
 
-    background-color: var(--color-text-logonav);
+        background-color: var(--color-text-logonav);
 
-    @include mobile-min {
-      width: 100%;
+        @include mobile-min {
+            width: 100%;
+        }
     }
-  }
 }
 
 // Checked icon checkbox
 .form-modal__inputcheckbox:checked + .form-modal__labelcheckbox .box-checkbox {
-  background-color: var(--color-text-logonav);
-  border: 3px solid var(--color-text-logonav);
+    background-color: var(--color-text-logonav);
+    border: 3px solid var(--color-text-logonav);
 }
 
 // Modal
 .is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 .no-scroll {
-  overflow: hidden;
+    overflow: hidden;
 }
